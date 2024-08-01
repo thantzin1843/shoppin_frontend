@@ -1,0 +1,6 @@
+1. cart for mobile (responsive)
+2. contact
+3. profile
+4. Footer
+5. animation
+6. 
