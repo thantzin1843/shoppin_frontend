@@ -3,14 +3,14 @@ import React, {useEffect, useState } from 'react'
 
 function ProductDetailImage({images}) {
   
-  const [src , setSrc] = useState("/pot.jpg");
+  const [src , setSrc] = useState(images[0].image);
   
   
   return (
   
     <div className='md:w-1/2 sm:w-full justify-center items-center pt-[50px]'>
         <div className='w-full h-[350px] shadow'>
-            <img src={`http://localhost:8000/storage/${images[0].image}`} className='w-full h-full' alt="" />
+            <img src={`http://localhost:8000/storage/${src}`} className='w-full h-full' alt="" />
         </div>
         <div className='w-full flex gap-1 mt-3 overflow-hidden'>
         {

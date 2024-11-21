@@ -5,7 +5,12 @@ import React  from 'react'
 
 const getProduct = async(id)=>{
 
-    const response = await fetch(`http://localhost:8000/api/products/${id}`);
+    const response = await fetch(`http://localhost:8000/api/products/${id}`,
+      {
+        cache: 'no-store',
+        revalidate: true,
+      }
+    );
 
     if(!response.ok){
       throw new Error("failed to get product");
